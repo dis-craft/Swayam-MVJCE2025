@@ -1,14 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Angkor } from "next/font/google";
 
-const angkor = Angkor({ subsets: ["latin"], weight: "400" });
 
 const NavBar = () => {
   return (
     <div>
       <div
-        className={`flex justify-evenly items-center p-5 ${angkor.className}`}
+        className="flex justify-evenly items-center p-5"
       >
         <div>
           <Image
