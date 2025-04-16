@@ -2,6 +2,7 @@ import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
 import About from "@/components/About";
+import Gallery from "@/components/Gallery";
 
 import { Angkor } from "next/font/google";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <VideoSection />
         <About />
+        <Gallery />
       </div>
     </main>
   );

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center gap-5">
-      <div className="flex items-center gap-2">
+    <div className="flex flex-col items-center gap-8">
+      <div className="flex items-center gap-4">
         <div>
           <h4 className="text-2xl py-3">About MVJ College Of Engineering</h4>
           <p className="w-[40rem] h-[20rem]">
@@ -30,7 +30,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <Image
           src="/assets/AboutImg3.png"
           alt="AboutImg3"
@@ -56,7 +56,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <div>
           <h4 className="text-2xl py-3">About the Theme</h4>
           <p className="w-[40rem] h-[20rem]">
