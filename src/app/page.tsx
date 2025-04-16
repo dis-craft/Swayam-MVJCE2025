@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       className="min-h-screen bg-contain bg-center bg-fixed text-[#5F4A37]"
     >
       <NavBar />
+      <HeroSection />
     </main>
   );
 }
