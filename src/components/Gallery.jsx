@@ -7,6 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const images = [
   "/assets/AboutImg1.png",
@@ -25,7 +27,7 @@ const Gallery = () => {
   return (
     <div>
       <p className="text-center text-6xl mb-6">Gallery</p>
-      <Carousel 
+      <Carousel
         opts={{
           loop: true,
         }}
@@ -33,7 +35,10 @@ const Gallery = () => {
       >
         <CarouselContent>
           {images.map((src, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis-1/3">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 basis-1/3"
+            >
               <div className="p-1">
                 <Image
                   src={src}
@@ -49,7 +54,7 @@ const Gallery = () => {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <Carousel 
+      <Carousel
         opts={{
           loop: true,
         }}
@@ -57,7 +62,10 @@ const Gallery = () => {
       >
         <CarouselContent>
           {images.map((src, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis-1/3">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 basis-1/3"
+            >
               <div className="p-1">
                 <Image
                   src={src}
@@ -73,7 +81,7 @@ const Gallery = () => {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <Carousel 
+      <Carousel
         opts={{
           loop: true,
         }}
@@ -81,7 +89,10 @@ const Gallery = () => {
       >
         <CarouselContent>
           {images.map((src, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 basis-1/3">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 basis-1/3"
+            >
               <div className="p-1">
                 <Image
                   src={src}
