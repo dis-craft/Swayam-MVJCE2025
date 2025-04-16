@@ -1,55 +1,32 @@
-import Image from "next/image";
 import React from "react";
-import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import Image from "next/image";
+import { Angkor } from "next/font/google";
+
+const angkor = Angkor({ subsets: ["latin"], weight: "400" });
 
 const NavBar = () => {
   return (
-    <div className="flex justify-around items-center w-full overflow-x-hidden h-20 px-10 py-4 bg-[#955734] text-xl font-bold ">
-      <Image
-        src="/assets/mvjLogo.png"
-        height={100}
-        width={100}
-        alt="MVJ Logo"
-      ></Image>
-      <div>
-        <ul className="flex gap-10 items-center w-full">
-          <li>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link href={"/gallery"}>Gallery</Link>
-          </li>
-          <li>
-            <Link href={"/events"}>Events</Link>
-          </li>
-          <li>
-            <Link href={"/login"}>Login</Link>
-          </li>
+    <div>
+      <div
+        className={`flex justify-evenly items-center p-5 ${angkor.className}`}
+      >
+        <div>
+          <Image
+            src="/assets/mvjLogo.png"
+            alt="MVJLogo"
+            width={120}
+            height={120}
+          />
+        </div>
+        <ul className="flex gap-10 items-center cursor-pointer">
+          <li>Home</li>
+          <li>Events</li>
+          <li>My Registrations</li>
+          <li>Brochure</li>
         </ul>
-      </div>
-      <div>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="cursor-pointer border-none">
-            Menu
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>My Registrations</DropdownMenuItem>
-            <DropdownMenuItem>Events Schedule</DropdownMenuItem>
-            <DropdownMenuItem>Brochure</DropdownMenuItem>
-            <DropdownMenuItem>Workshop</DropdownMenuItem>
-            <DropdownMenuItem>Sponsorships</DropdownMenuItem>
-            <DropdownMenuItem>Contacts</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <button className="cursor-pointer bg-[#5F4A37] text-[#f9efd1] h-10 w-25 rounded-full">
+          Login
+        </button>
       </div>
     </div>
   );

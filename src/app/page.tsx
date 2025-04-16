@@ -1,10 +1,12 @@
-import Image from "next/image";
-import HeroSection from "@/components/HeroSection";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
-      <HeroSection />
-    </div>
+    <main
+      style={{ backgroundImage: "url('/assets/Background.png')" }}
+      className="min-h-screen bg-contain bg-center bg-fixed text-[#5F4A37]"
+    >
+      <NavBar />
+    </main>
   );
 }
