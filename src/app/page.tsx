@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
+import About from "@/components/About";
 
 import { Angkor } from "next/font/google";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="flex flex-col gap-[14rem]">
         <HeroSection />
         <VideoSection />
+        <About />
       </div>
     </main>
   );
