@@ -19,7 +19,7 @@ const Contact = () => {
           </div>
           <div>Email : helpdesk@mvjce.edu.in </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 pb-2">
           <p>Built by :</p>
           <div className="flex gap-3 ">
             <Image

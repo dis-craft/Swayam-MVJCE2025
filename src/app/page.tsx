@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
 import Contact from "@/components/Contact";
 
+
 import { Angkor } from "next/font/google";
 
 const angkor = Angkor({ subsets: ["latin"], weight: "400" });
