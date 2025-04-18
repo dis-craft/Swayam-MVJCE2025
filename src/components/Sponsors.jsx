@@ -23,7 +23,7 @@ const sponsors = [
 const Sponsors = () => {
   const plugin = useRef(
     Autoplay({
-      delay: 1000, // change delay if needed
+      delay: 2000, // change delay if needed
       stopOnInteraction: false,
       stopOnMouseEnter: false,
     })
