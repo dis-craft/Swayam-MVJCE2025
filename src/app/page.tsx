@@ -4,6 +4,7 @@ import VideoSection from "@/components/VideoSection";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
+import Contact from "@/components/Contact";
 
 import { Angkor } from "next/font/google";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Gallery />
         <Sponsors />
+        <Contact/>
       </div>
     </main>
   );
