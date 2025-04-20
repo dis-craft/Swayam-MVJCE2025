@@ -1,11 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Angkor } from "next/font/google";
+const angkor = Angkor({ subsets: ["latin"], weight: "400" });
 
 const NavBar = () => {
   return (
     <div>
-      <div
-        className="flex justify-evenly items-center p-5"
-      >
+      <div className="flex md:justify-evenly items-center p-5 relative">
         <div>
           <Image
             src="/assets/mvjLogo.png"
@@ -14,15 +22,41 @@ const NavBar = () => {
             height={120}
           />
         </div>
-        <ul className="flex gap-10 items-center cursor-pointer">
-          <li>Home</li>
-          <li>Events</li>
-          <li>My Registrations</li>
+        <ul className="hidden md:flex gap-10 items-center cursor-pointer">
+          <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/events"}>Events</Link>
+          </li>
+          <li>
+            <Link href={"/registrations"}>Registrations</Link>
+          </li>
           <li>Brochure</li>
         </ul>
-        <button className="cursor-pointer bg-[#5F4A37] text-[#f9efd1] h-10 w-25 rounded-full">
+        <button className="hidden md:block cursor-pointer bg-[#5F4A37] text-[#f9efd1] h-10 w-28 rounded-full">
           Login
         </button>
+        <div className={`md:hidden ml-auto mr-5`}>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Menu className="h-6 w-6 " />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className={`w-40 bg-[#f9efd1] text-[#5F4A37] mr-5 ${angkor.className}`}>
+              <DropdownMenuItem asChild>
+                <Link href="/">Home</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/events">Events</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/registrations">Registrations</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>Brochure</DropdownMenuItem>
+              <DropdownMenuItem>Login</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </div>
   );
