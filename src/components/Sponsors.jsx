@@ -33,7 +33,9 @@ const Sponsors = () => {
   return (
     <div className="mb-[10rem]">
       <FadeInBlock>
-        <p className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8">Sponsors</p>
+        <p className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8">
+          Sponsors
+        </p>
         <Carousel
           opts={{
             loop: true,
@@ -52,8 +54,7 @@ const Sponsors = () => {
                     src={src}
                     width={200}
                     height={200}
-                    alt="Gallery Images"
-                    className=""
+                    alt="Sponsors"
                   ></Image>
                 </div>
               </CarouselItem>
