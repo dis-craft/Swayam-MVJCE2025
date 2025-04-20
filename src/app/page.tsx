@@ -7,6 +7,7 @@ import Sponsors from "@/components/Sponsors";
 import Contact from "@/components/Contact";
 
 import { Angkor } from "next/font/google";
+import ChatWidget from "@/components/ChatWidget";  // Import ChatWidget here
 
 const angkor = Angkor({ subsets: ["latin"], weight: "400" });
 
@@ -27,6 +28,9 @@ export default function Home() {
         <Sponsors />
         <Contact />
       </div>
+
+      {/* ChatWidget rendered as a fixed-position component */}
+      <ChatWidget />  {/* This is where the chatbot will appear */}
     </main>
   );
 }
