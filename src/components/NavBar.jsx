@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <div>
       <div
-        className={`flex md:justify-evenly items-center p-5 relative ${playfairDisplay.className}`}
+        className={`flex md:justify-evenly items-center p-3 relative ${playfairDisplay.className}`}
       >
         <div>
           <Image
@@ -57,7 +57,7 @@ const NavBar = () => {
               <DropdownMenuItem asChild>
                 <Link href="/">Home</Link>
               </DropdownMenuItem>
-              <DropdownMenuSeparator  />
+              <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <Link href="/events">Events</Link>
               </DropdownMenuItem>
