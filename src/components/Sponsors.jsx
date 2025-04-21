@@ -10,6 +10,12 @@ import {
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import FadeInBlock from "./FadeInBlock";
+import { Playfair_Display } from "next/font/google";
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 const sponsors = [
   "/assets/MVJlogo.png",
@@ -33,7 +39,7 @@ const Sponsors = () => {
   return (
     <div className="mb-[10rem]">
       <FadeInBlock>
-        <p className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8">
+        <p className={`text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8 ${playfairDisplay.className}`}>
           Sponsors
         </p>
         <Carousel

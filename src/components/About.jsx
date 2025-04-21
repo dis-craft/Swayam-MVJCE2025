@@ -1,19 +1,35 @@
 import Image from "next/image";
 import FadeInBlock from "@/components/FadeInBlock";
+import { Open_Sans, Playfair_Display } from "next/font/google";
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 const About = () => {
   return (
     <div className="flex flex-col items-center gap-6 md:gap-8 px-4 md:px-6">
       <FadeInBlock>
-        <p className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8">
+        <p
+          className={`text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8 ${playfairDisplay.className}`}
+        >
           About
         </p>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="order-2 md:order-1">
-            <h4 className="text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left">
+            <h4
+              className={`text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left ${playfairDisplay.className}`}
+            >
               About MVJ College Of Engineering
             </h4>
-            <p className="w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto">
+            <p
+              className={`w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto text-center md:text-left ${openSans.className}`}
+            >
               Founded in 1982 by the Venkatesha Education Society, MVJ College
               of Engineering has been a steadfast provider of quality education
               in engineering and technology. With a focus on holistic learning,
@@ -54,10 +70,14 @@ const About = () => {
             />
           </div>
           <div className="md:order-1 order-2">
-            <h4 className="text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left">
+            <h4
+              className={`text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left ${playfairDisplay.className}`}
+            >
               About Swayam
             </h4>
-            <p className="w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto">
+            <p
+              className={`w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto text-center md:text-left ${openSans.className}`}
+            >
               For years, SWAYAM has been a beacon of creativity and expression,
               bringing together the brightest minds and talents in a celebration
               of cultural brilliance. Rooted in a legacy of excellence, SWAYAM
@@ -78,10 +98,14 @@ const About = () => {
       <FadeInBlock>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="order-2 md:order-1">
-            <h4 className="text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left">
+            <h4
+              className={`text-xl sm:text-2xl py-2 md:py-3 text-center md:text-left ${playfairDisplay.className}`}
+            >
               About the Theme
             </h4>
-            <p className="w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto">
+            <p
+              className={`w-full md:w-auto md:max-w-xl lg:max-w-2xl h-auto text-center md:text-left ${openSans.className}`}
+            >
               VIRASATH, a vibrant blend of cultures and customs, the emblem of
               pride and motivation; ushers us to discover the rich artistic
               treasures of our past and weave them into the fabric of our

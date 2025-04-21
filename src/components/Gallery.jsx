@@ -10,6 +10,12 @@ import Image from "next/image";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import FadeInBlock from "@/components/FadeInBlock";
+import { Playfair_Display } from "next/font/google";
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 const images = [
   "/assets/gallery/IMG_4815.jpg",
@@ -62,7 +68,7 @@ const Gallery = () => {
   return (
     <div className="py-8 md:py-16">
       <FadeInBlock>
-        <p className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-12">
+        <p className={`text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-12 ${playfairDisplay.className}`}>
           Gallery
         </p>
         <Carousel
